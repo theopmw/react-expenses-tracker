@@ -22,6 +22,7 @@ const Expenses = (props) => {
         {/* Use .map method to create a new array of ExpenseItem JSX elements based on the objects in the expenses array */}
         {props.items.map((expense) => (
           <ExpenseItem
+            key={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
